@@ -18,6 +18,9 @@
   },
   "devDependencies": {
   },
+  "bin": {
+    "webot": "bin/webot"
+  },
   "keywords": [
     "weixin",
     "webot",
