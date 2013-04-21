@@ -1,8 +1,8 @@
 # webot-cli
 
-Command line interface for [weixin-robot](https://github.com/ktmud/weixin-robot).
+Command line interface for [webot](https://github.com/node-webot/webot).
 
-    npm install webot-cli
+    npm install webot-cli -g
 
 ## Commands
 
