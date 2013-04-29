@@ -28,7 +28,9 @@ program.on('--help', function(cmd) {
     console.log('  Commands:');
     console.log();
     console.log('    send [image|text|loc|..]   send a message to test host');
+    console.log('    menu [create|delete|get]   manipulate wechat menu');
     console.log('    help [command]             view help info for specified command');
+    console.log();
   }
   process.exit();
 });
