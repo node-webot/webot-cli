@@ -1,6 +1,6 @@
 {
   "name": "webot-cli",
-  "version": "0.0.1-1",
+  "version": "0.0.2",
   "description": "Command line interface for weixin-robot",
   "main": "index.js",
   "repository": {
