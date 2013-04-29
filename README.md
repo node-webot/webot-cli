@@ -7,37 +7,33 @@ Command line interface for [weixin-robot](https://github.com/node-webot/weixin-r
 ## Commands
 
 ```man
-  Usage: webot send [type] [options] [message]
-
-  Types:
-
-    # t, text            Send a text message (default)
-    # i, image, pic      Send a image message
-    # l, loc, location   Send a location message
-    # e, event           Send a event message
+  Usage: webot <command> [options]
 
   Options:
 
-    --token          API token for wechat, defaults to `process.env.WX_TOKEN`
-    --port           The port your service is listening at, defaults to `process.env.PORT`
-    --host           Server hostname, defaults to 127.0.0.1
-    --route          The subdirectory you are watching
-    --des            Request destination, a full url
-                     Will override host, port and route
+    -h, --help     output usage information
+    -V, --version  output the version number
 
-  Examples:
+  Commands:
 
-    webot send --token abc123 --des http://wechat.example.com/
-    webot send t Hello
+    send [image|text|loc|..]   send a message to test host
+    menu [create|delete|get]   manipulate wechat menu
+    help [command]             view help info for specified command
 ```
 
 Use `webot help` for more details.
 
-### 微信自定义菜单
+## 发送测试消息
 
-需要一个 json 文件保存 access_token 等配置信息。为安全起见，建议你只在本地使用此文件，不要把它放到代码仓库中。
+    webot help send
 
-在当前目录新建 **wx_config.json** ：
+
+## 微信自定义菜单
+
+    webot help menu
+
+需要一个 json 文件保存 access_token 等配置信息（默认是当前目录的 **wx_config.json**）。
+为安全起见，建议你只在本地使用此文件，不要把它放到代码仓库中。
 
 ```javascript
 {
@@ -46,7 +42,7 @@ Use `webot help` for more details.
 }
 ```
 
-#### 创建或修改
+### 创建或修改
 
 按照微信文档中的[请求示例][1]，新建一个 json 文件（如`menu.json`），然后利用 stdin 传入 `webot menu create` 命令：
 
