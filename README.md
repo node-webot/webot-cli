@@ -25,8 +25,32 @@ Use `webot help` for more details.
 
 ## 发送测试消息
 
-    webot help send
+```man
+  Usage: webot send [type] [options] [message]
 
+  Types:
+
+    # t, text            Send text messages (default)
+    # i, image, pic      Send image messages
+    # l, loc, location   Send location messages
+    # e, event           Send event messages
+
+  Options:
+
+    --token          API token for wechat, defaults to `process.env.WX_TOKEN`
+    --port           The port your service is listening at, defaults to `process.env.PORT`
+    --host           Server hostname, defaults to 127.0.0.1
+    --route          The subdirectory you are watching
+    --des            Request destination, a full url
+                     Will override host, port and route
+    --user           FromUserName of this message.
+
+  Examples:
+
+    webot send --token abc123 --des http://example.com/webot
+    webot send t Hello
+    webot send loc 20.12 120.33 "Somewhere Out There"
+```
 
 ## 微信自定义菜单
 
