@@ -34,6 +34,8 @@ Use `webot help` for more details.
     # i, image, pic      Send image messages
     # l, loc, location   Send location messages
     # e, event           Send event messages
+    # scan               Send scan QRcode event
+    # reportloc          Send report location event
 
   Options:
 
@@ -50,6 +52,21 @@ Use `webot help` for more details.
     webot send --token abc123 --des http://example.com/webot
     webot send t Hello
     webot send loc 20.12 120.33 "Somewhere Out There"
+```
+
+### 在代码里使用
+
+```javascript
+var send = require('webot-cli').commands.send
+var options = {
+  silent: true,
+  port: PORT,
+  route: media.webotPath(),
+  token: media.wx_token,
+  input: ['text', 'abcotea']
+}
+
+send(options, data)
 ```
 
 ## 微信自定义菜单
