@@ -150,3 +150,7 @@ webot.set('today_music', {
 (the MIT licence)
 
 [1]:http://mp.weixin.qq.com/wiki/index.php?title=%E8%87%AA%E5%AE%9A%E4%B9%89%E8%8F%9C%E5%8D%95%E6%8E%A5%E5%8F%A3#.E8.8F.9C.E5.8D.95.E5.88.9B.E5.BB.BA)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/node-webot/webot-cli/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
